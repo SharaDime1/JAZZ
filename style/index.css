@@ -4,6 +4,7 @@
   color-scheme: dark;
   --font-family: "Montserrat", sans-serif;
   --color-bg: #121517;
+  --color-page-bg: #ff1493;
   --color-ink: #000000;
   --color-text: #D9D9D9;
   --color-white: #fff;
@@ -136,7 +137,7 @@ body {
   line-height: var(--line-height-163pct);
   letter-spacing: calc(-1 * var(--tracking-0-02em));
   color: var(--color-ink);
-  background-color: var(--color-bg);
+  background-color: var(--color-page-bg);
 }
 
 html {
