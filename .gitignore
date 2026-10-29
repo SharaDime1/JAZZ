@@ -1,0 +1,5 @@
+# Local browser verification artifacts
+/checks/browser-profile/
+/checks/before/
+/checks/after/
+/.qa/
