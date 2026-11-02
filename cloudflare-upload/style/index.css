@@ -1070,6 +1070,193 @@ a:active, button:active {
   opacity: 0;
 }
 
+/* Phone layout: keep the desktop composition and use existing design tokens. */
+@media (max-width: 767px) {
+  .header {
+    padding: var(--space-10px) 0;
+  }
+
+  .header .container {
+    gap: var(--space-8px);
+  }
+
+  .header__nav {
+    width: 100%;
+    gap: 0 var(--space-10px);
+  }
+
+  .header__link,
+  .footer__nav-link,
+  .survey__radio-group label {
+    display: flex;
+    align-items: center;
+    min-height: var(--size-45px);
+  }
+
+  .title {
+    margin-top: 0;
+    font-size: clamp(var(--font-size-32px), 8vw, var(--font-size-37px));
+  }
+
+  .welcome__container,
+  .history .container,
+  .contacts .container {
+    gap: var(--space-30px);
+  }
+
+  .welcome__content,
+  .welcome .btn {
+    width: 100%;
+  }
+
+  .welcome__image-wrapper {
+    width: min(65%, var(--size-275px));
+  }
+
+  .welcome__title,
+  .history__title,
+  .instruments__title,
+  .contacts__title {
+    margin-bottom: var(--space-25px);
+  }
+
+  .welcome__text,
+  .history__desk,
+  .contacts__desc {
+    margin-bottom: var(--space-30px);
+  }
+
+  .benefits,
+  .history,
+  .products,
+  .instruments,
+  .events {
+    margin-top: var(--space-60px);
+  }
+
+  .benefits__container {
+    width: calc(100% - var(--space-30px));
+    padding: var(--space-25px) var(--space-15px);
+    border-radius: var(--radius-30px);
+  }
+
+  .benefits__container > .benefits__item {
+    display: grid;
+    grid-template-columns: var(--size-80px) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-8px) var(--space-15px);
+    width: 100%;
+    max-width: none;
+    text-align: left;
+  }
+
+  .benefits__img-wrapper {
+    display: block;
+    grid-row: span 2;
+    margin: 0;
+  }
+
+  .benefits__img-wrapper::before {
+    display: none;
+  }
+
+  .benefits__img-wrapper img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .benefits__title {
+    margin: 0;
+    font-size: var(--font-size-20px);
+  }
+
+  .card {
+    padding: var(--space-25px);
+  }
+
+  .card__img {
+    width: var(--size-200px);
+  }
+
+  .instrument {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-15px);
+    padding: var(--space-15px);
+  }
+
+  .instrument img {
+    flex-shrink: 0;
+    width: var(--size-60px);
+  }
+
+  .instrument__title,
+  .event__title {
+    font-size: var(--font-size-20px);
+  }
+
+  .event__title {
+    min-height: 0;
+    line-height: var(--line-height-163pct);
+  }
+
+  .contacts {
+    padding-top: var(--space-60px);
+    padding-bottom: var(--space-50px);
+  }
+
+  .contacts__phone {
+    font-size: var(--font-size-26px);
+  }
+
+  .contacts__img-wrapper {
+    align-self: center;
+    width: min(100%, var(--size-275px));
+  }
+
+  .survey__text {
+    align-items: flex-start;
+    margin-bottom: var(--space-25px);
+  }
+
+  .survey__form-wrapper {
+    padding: 0;
+  }
+
+  .survey__form-actions > .btn {
+    width: 100%;
+  }
+
+  .footer__nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: var(--space-20px) var(--space-15px);
+  }
+
+  .footer__up-link {
+    width: var(--size-60px);
+    height: var(--size-60px);
+    border-radius: var(--radius-20px);
+  }
+}
+
+/* In a short landscape viewport, let the navigation scroll with the page. */
+@media (max-width: 767px) and (max-height: 500px) {
+  .header {
+    position: static;
+  }
+
+  body {
+    padding-top: 0;
+  }
+
+  [id] {
+    scroll-margin-top: var(--space-20px);
+  }
+}
+
 @media (min-width: 768px) {
   body {
   font-size: var(--font-size-18px);
